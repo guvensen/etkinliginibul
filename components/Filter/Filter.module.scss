@@ -1,0 +1,58 @@
+@import "styles/mixins/breakpoints";
+@import "styles/variables";
+
+
+.filterWrapper{
+  width: 960px;
+  margin: 0 auto;
+  padding: 58px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: self-end;
+
+  .formGroup{
+    width: 250px;
+  }
+
+  label{
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    text-shadow: 0 0 #adadad;
+    display: block;
+  }
+
+  input,
+  select{
+    margin: 6px 21px 0 0;
+    padding: 6px 16px 6px 14px;
+    object-fit: contain;
+    border-radius: 5px;
+    border: solid 2px $primary;
+    color: $primary;
+    width: 100%;
+  }
+
+  .datesWrapper{
+    position: relative;
+  }
+
+  .filterBtn{
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    background: $primary;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+  }
+}
