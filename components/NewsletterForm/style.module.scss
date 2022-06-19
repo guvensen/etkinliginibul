@@ -1,0 +1,104 @@
+@import "styles/mixins/breakpoints";
+
+.newsletter {
+  margin-left: auto;
+
+  .inputWrapper {
+
+    .inputGroup {
+      width: 100%;
+      margin-right: 1rem;
+
+      .input {
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 0.75rem;
+        flex: 1 1 auto;
+        padding: 0.75rem 1rem;
+        border: 1px solid;
+        font-size: 1rem;
+        line-height: 1.5;
+
+        &.isInvalid {
+          border-color: #f97272;
+        }
+      }
+
+      .invalidFeedback {
+        height: 21px;
+        font-size: .8rem;
+        color: #f97272;
+        margin-top: .5rem;
+      }
+    }
+
+    .button {
+      width: 100%;
+      margin-top: 20px;
+      height: 48px;
+      background-color: #2e2e2e;
+      color: #f3eeea;
+      border-radius: 0.75rem;
+      padding: 0.75rem 2rem;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 600;
+
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  .sendResult {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+    &.success {
+      color: #7bb97b;
+    }
+
+    &.error {
+      color: #f97272;
+    }
+  }
+
+  .spinner {
+    animation: spin infinite 2s linear;
+    color: #f3eeea;
+    width: 25px;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @include device("x-large") {
+    min-width: unset;
+    width: 100%;
+  }
+
+  @include device("large") {
+    margin-left: unset;
+  }
+
+  @include device("x-small") {
+    .inputWrapper {
+      flex-direction: column;
+
+      .inputGroup {
+        .input {
+          margin-right: unset;
+        }
+      }
+    }
+  }
+}
