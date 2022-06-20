@@ -19,26 +19,26 @@ a {
 }
 
 .container {
-  width: 1200px;
+  width: 75rem;
   margin: 0 auto;
 }
 
 
 @include device("x-large") {
   .container {
-    width: 1120px;
+    width: 70rem;
   }
 }
 
 @include device("large") {
   .container {
-    width: 960px;
+    width: 60rem;
   }
 }
 
 @include device("medium") {
   .container {
-    width: calc(767px - 3rem);
+    width: 45rem;
   }
 }
 
