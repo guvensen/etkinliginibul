@@ -7,8 +7,7 @@ export default function Home() {
     return (
       <DefaultLayout>
           <div className="container">
-
-              {/*<Filter/>*/}
+              <Filter/>
 
               <EventList/>
           </div>
