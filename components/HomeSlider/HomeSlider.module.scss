@@ -1,0 +1,14 @@
+@import "styles/mixins/breakpoints";
+@import "styles/variables";
+
+.homeSliderWrapper{
+  background: #7bb97b;
+  width: 100%;
+  height: 300px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

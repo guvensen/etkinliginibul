@@ -3,23 +3,69 @@ import style from './Filter.module.scss';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
-export default function Filter() {
+
+export default function Filter({places, categories, provinces, onFilter}) {
     const [dateRange, setDateRange] = useState([null, null]);
     const [startDate, endDate] = dateRange;
+    const [filterData, setFilterData] = useState({
+        category: null,
+        place: null,
+        province: null,
+        query: null
+    });
+
+    const handleInputChange = (event) => {
+        const target = event.target;
+        let value = target.type === 'checkbox' ? target.checked : target.value;
+        if(value==="false"){
+            value=false;
+        }
+
+        const name = target.name;
+
+        let  newState = {...filterData, [name]:value}
+        setFilterData(newState);
+    }
+
+    const handleSelectChange = (meta) => {
+        let name = meta.target.name;
+        let value = meta.target.value;
+
+        setFilterData({...filterData, [name]:value});
+    }
+
+    const placeList = places.map((item,index)=>{
+        return <option key={"key-"+index} value={item.id}> {item.title}</option>
+    })
+
+    const categoryList = categories.map((item,index)=>{
+        return <option key={"key-"+index} value={item.id}> {item.title}</option>
+    })
+
+    const provinceList = provinces.map((item,index)=>{
+        return <option key={"key-"+index} value={item.id}> {item.name}</option>
+    })
 
     return <div className={style.filterWrapper}>
 
         <div className={style.searchBar}>
-            <input type="text" placeholder="Ara.."/>
+            <input
+                type="text"
+                placeholder="Ara.."
+                onChange={handleInputChange}
+            />
         </div>
 
         <div className={style.filterOptions}>
             <div className={style.formGroup}>
                 <label htmlFor="category">Etkinlik Türü</label>
-                <select id="category">
-                    <option>Tiyatro</option>
-                    <option>Müze</option>
-                    <option>Konser</option>
+                <select id="category"
+                        name="category"
+                        onChange={(meta) => {
+                            handleSelectChange(meta)
+                        }}
+                >
+                    {categoryList}
                 </select>
             </div>
             <div className={style.formGroup}>
@@ -38,22 +84,30 @@ export default function Filter() {
 
         <div className={style.filterOptions}>
             <div className={style.formGroup}>
-                <label htmlFor="location">Mekan</label>
-                <select id="location">
-                    <option>Zorlu Center</option>
-                    <option>Vadistanbul</option>
+                <label htmlFor="place">Mekan</label>
+                <select id="place"
+                        name="place"
+                        onChange={(meta) => {
+                            handleSelectChange(meta)
+                        }}
+                >
+                    {placeList}
                 </select>
             </div>
             <div className={style.formGroup}>
-                <label htmlFor="location">Şehir</label>
-                <select id="location">
-                    <option>İstanbul</option>
-                    <option>Ankara</option>
+                <label htmlFor="province">Şehir</label>
+                <select id="province"
+                        name="province"
+                        onChange={(meta) => {
+                            handleSelectChange(meta)
+                        }}
+                >
+                    {provinceList}
                 </select>
             </div>
         </div>
 
-        <div className={style.filterBtn}>
+        <div className={style.filterBtn} onClick={() => onFilter(filterData)}>
             Filtrele
         </div>
     </div>
