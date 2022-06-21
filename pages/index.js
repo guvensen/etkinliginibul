@@ -17,8 +17,6 @@ export default function Home() {
         const year          = d.getFullYear();
         const month         = ("0"+(d.getMonth() + 1)).slice(-2);
         const day           = ("0"+d.getDate()).slice(-2);
-        const hour          = ("0"+d.getHours()).slice(-2);
-        const minutes       = ("0"+d.getMinutes()).slice(-2);
 
         return year+"-"+month+"-"+day;
     }
@@ -48,12 +46,12 @@ export default function Home() {
 
                     }else if(key === "startDate" || key === "endDate" ){
                         if(!param.endDate){
-                            if(!((dateFormat(item.startDate) <= dateFormat(param.startDate)) && (dateFormat(param.startDate) <= dateFormat(item.endDate)))){
+                            if(!((dateFormat(param.startDate) >= dateFormat(item.startDate)) && (dateFormat(param.startDate) <= dateFormat(item.endDate)))){
                                 result = false;
                                 break;
                             }
                         }else{
-                            if(((dateFormat(param.startDate) <= dateFormat(item.startDate)) && (dateFormat(param.endDate) <= dateFormat(item.endDate)))){
+                            if(!((dateFormat(item.startDate) >= dateFormat(param.startDate)) && (dateFormat(item.startDate) <= dateFormat(param.endDate)))){
                                 result = false;
                                 break;
                             }

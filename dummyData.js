@@ -6,7 +6,7 @@ export const events = [
         description: "Pazar günü hip hop kültürüyle ‘’Yaz Kutlamaları’’ dansın ardından müzikle devam ediyor. Türkçe rap sahnesinin en üretken isimlerinden Anıl Piyancı, Festival Park Kadıköy’de!",
         performer: "Anıl Piyancı",
         isPopular: false,
-        startDate: "2022-02-01 03:00",
+        startDate: "2022-01-02 03:00", // yyyy-MM-dd
         endDate: "2022-01-05 22:30",
         category: 1,
         place: 1,
