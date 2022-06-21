@@ -28,7 +28,7 @@ export default function EventList({events, categories, places, provinces}) {
         let palace = getPlace(item.place);
         let province = getProvince(palace.address.province);
 
-        let address = palace.title + " - " + palace.address.district +"/"+ province.name;
+        let address = palace.address.district +"/"+ province.name;
         let price = item.price.isFree ? "Ücretsiz" : "100.00 TL";
         let slug = palace.slug+"/"+item.slug;
 
@@ -59,7 +59,7 @@ export default function EventList({events, categories, places, provinces}) {
                 </div>
                 <div className={style.eventTimeDescription}>
                     <p className={style.date}>{item.startDate}</p>
-                    <p>{address}</p>
+                    <p><a href={palace.slug}>{palace.title}</a> - {address}</p>
                 </div>
                 <div className={style.actionWrapper}>
                     <div className={style.price}>{price}</div>
