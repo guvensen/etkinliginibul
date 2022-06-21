@@ -2,9 +2,10 @@ import style from './EventList.module.scss';
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import {provinces} from "../../dummyData";
 
 
-export default function EventList({events, categories, places}) {
+export default function EventList({events, categories, places, provinces}) {
 
     const getCategory = (id) => {
         let index = categories.findIndex(item => item.id === id)
@@ -16,12 +17,18 @@ export default function EventList({events, categories, places}) {
         return places[index];
     }
 
+    const getProvince = (id) => {
+        let index = provinces.findIndex(item => item.id === id)
+        return provinces[index];
+    }
+
 
     const items = events.map((item, index) => {
         let category = getCategory(item.category);
         let palace = getPlace(item.place);
+        let province = getProvince(palace.address.province);
 
-        let address = palace.title + " - " + palace.address.district +"/"+ palace.address.province;
+        let address = palace.title + " - " + palace.address.district +"/"+ province.name;
         let price = item.price.isFree ? "Ücretsiz" : "100.00 TL";
         let slug = palace.slug+"/"+item.slug;
 

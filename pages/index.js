@@ -75,7 +75,7 @@ export default function Home() {
           <div className="container">
               <Filter places={places} categories={categories} provinces={provinces} onFilter={setFilter}/>
 
-              <EventList events={data} categories={categories} places={places}/>
+              <EventList events={data} categories={categories} places={places} provinces={provinces}/>
           </div>
       </DefaultLayout>
   )

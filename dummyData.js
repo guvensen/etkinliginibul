@@ -25,7 +25,7 @@ export const events = [
         title: "Gülmek Yakışır: Alpay Erdem",
         slug: "gulmek-yakisir-alpay-erdem",
         description: "Mizah yazarı Alpay Erdem tek kişilik gösterisi ile sahnede. Uykusuz dergisi yazar ve çizerlerinden olan Alpay Erdem usta işi mizahı ile Müze Gazhane’de seyirci karşısına çıkıyor.",
-        performer: "Güven",
+        performer: "Alpay Erdem",
         isPopular: false,
         startDate: "2022-02-02 03:00",
         endDate: "2022-02-05 22:30",
