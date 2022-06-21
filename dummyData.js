@@ -6,8 +6,8 @@ export const events = [
         description: "Pazar günü hip hop kültürüyle ‘’Yaz Kutlamaları’’ dansın ardından müzikle devam ediyor. Türkçe rap sahnesinin en üretken isimlerinden Anıl Piyancı, Festival Park Kadıköy’de!",
         performer: "Anıl Piyancı",
         isPopular: false,
-        startDate: "26-06-2022 20:30",
-        endDate: "26-06-2022 20:30",
+        startDate: "2022-02-01 03:00",
+        endDate: "2022-01-05 22:30",
         category: 1,
         place: 1,
         photos: {
@@ -25,10 +25,10 @@ export const events = [
         title: "Gülmek Yakışır: Alpay Erdem",
         slug: "gulmek-yakisir-alpay-erdem",
         description: "Mizah yazarı Alpay Erdem tek kişilik gösterisi ile sahnede. Uykusuz dergisi yazar ve çizerlerinden olan Alpay Erdem usta işi mizahı ile Müze Gazhane’de seyirci karşısına çıkıyor.",
-        performer: "Alpay Erdem",
+        performer: "Güven",
         isPopular: false,
-        startDate: "26-06-2022 18:00",
-        endDate: "26-06-2022 18:00",
+        startDate: "2022-02-02 03:00",
+        endDate: "2022-02-05 22:30",
         category: 2,
         place: 2,
         photos: {
@@ -48,8 +48,8 @@ export const events = [
         description: "Bu programda Osmanlı Saray dansları ve Anadolu'nun farklı bölgelerinin dansları, oryantal danslar ve ritm show ile harmanlanarak çağdaş bir koreografi ile sunulmaktadır. ",
         performer: "Dansın Ritmi",
         isPopular: false,
-        startDate: "21-06-2022 18:00",
-        endDate: "21-06-2022 18:00",
+        startDate: "2022-03-02 03:00",
+        endDate: "2022-03-05 22:30",
         category: 3,
         place: 3,
         photos: {
@@ -69,8 +69,8 @@ export const events = [
         description: "Türk pop müziğinin eskimeyen şarkılarının sesi Çelik, 25 Haziran Cumartesi akşamı, 90’ları müziğiyle Festival Park Kadıköy’e getiriyor!",
         performer: "Çelik",
         isPopular: false,
-        startDate: "25-06-2022 20:30",
-        endDate: "25-06-2022 20:30",
+        startDate: "2022-04-02 03:00",
+        endDate: "2022-04-05 22:30",
         category: 1,
         place: 1,
         photos: {
@@ -90,8 +90,8 @@ export const events = [
         description: "Güçlü sahne performansı ve müziğiyle Büyük Ev Ablukada’nın Galvaniz Gelbiraz’ı Gülinler, 24 Haziran saat 19.00’da Festival Park Kadıköy’de!",
         performer: "Gülinler",
         isPopular: false,
-        startDate: "24-06-2022 19:00",
-        endDate: "24-06-2022 19:00",
+        startDate: "2022-05-02 03:00",
+        endDate: "2022-05-05 22:30",
         category: 1,
         place: 1,
         photos: {
@@ -111,8 +111,8 @@ export const events = [
         description: "Kendine özgü komedisiyle yüzleri güldürmeye gelen Mesut Süre “Siz Hepiniz Ben Tek” adlı tek kişilik sahne performansıyla 22 Haziran Çarşamba günü saat 20.00’de Festival Park Kadıköy sahnesinde.",
         performer: "Mesut Süre",
         isPopular: false,
-        startDate: "22-06-2022 20:00",
-        endDate: "22-06-2022 20:00",
+        startDate: "2022-06-02 03:00",
+        endDate: "2022-06-05 22:30",
         category: 4,
         place: 1,
         photos: {
@@ -132,8 +132,8 @@ export const events = [
         description: "Dinleme Kulübü’nde bu haftanın teması; “iyileşmek için dinlediğin bir parça”",
         performer: "Dinleme Kulübü",
         isPopular: false,
-        startDate: "21-06-2022 19:00",
-        endDate: "21-06-2022 19:00",
+        startDate: "2022-07-02 03:00",
+        endDate: "2022-07-05 22:30",
         category: 5,
         place: 2,
         photos: {
@@ -183,7 +183,7 @@ export const places = [
         slug: "festival-park-kadikoy",
         address: {
             country: "Türkiye",
-            province: "İstanbul",
+            province: 6,
             district: "Kadıköy",
             line: ""
         },
@@ -195,7 +195,7 @@ export const places = [
         slug: "muze-gazhane",
         address: {
             country: "Türkiye",
-            province: "İstanbul",
+            province: 34,
             district: "Kadıköy",
             line: ""
         },
@@ -207,7 +207,7 @@ export const places = [
         slug: "hodjapasha",
         address: {
             country: "Türkiye",
-            province: "İstanbul",
+            province: 34,
             district: "Fatih",
             line: ""
         },

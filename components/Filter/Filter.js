@@ -5,6 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 
 export default function Filter({places, categories, provinces, onFilter}) {
+    const [currentPlaces, setCurrentPlaces] = useState(places);
     const [dateRange, setDateRange] = useState([null, null]);
     const [startDate, endDate] = dateRange;
     const [filterData, setFilterData] = useState({
@@ -28,14 +29,48 @@ export default function Filter({places, categories, provinces, onFilter}) {
     }
 
     const handleSelectChange = (meta) => {
+        let result;
         let name = meta.target.name;
         let value = meta.target.value;
 
-        setFilterData({...filterData, [name]:value});
+        result = {...filterData, [name]:value}
+
+        if(name === "province"){
+            placeByProvince(value);
+
+            result = {...filterData, [name]:value, place: 0}
+        }
+
+        setFilterData(result);
     }
 
-    const placeList = places.map((item,index)=>{
-        return <option key={"key-"+index} value={item.id}> {item.title}</option>
+    const placeByProvince = (provinceId) => {
+
+        let currentPlaces = places;
+
+        if(parseInt(provinceId) !== 0){
+            currentPlaces = places.filter(item => {
+                let result = true;
+
+                if(item.address.province !== parseInt(provinceId)){
+                    result = false;
+                }
+
+                return result;
+            });
+        }
+
+        setCurrentPlaces(currentPlaces);
+    }
+
+    const onFilterClick = () => {
+        let result = {...filterData, startDate:startDate, endDate:endDate}
+
+        onFilter(result);
+    }
+
+    const placeList = currentPlaces.map((item,index)=>{
+        return <option key={"key-"+index} value={item.id}>{item.title}</option>
     })
 
     const categoryList = categories.map((item,index)=>{
@@ -52,8 +87,36 @@ export default function Filter({places, categories, provinces, onFilter}) {
             <input
                 type="text"
                 placeholder="Ara.."
+                name="query"
                 onChange={handleInputChange}
             />
+        </div>
+
+        <div className={style.filterOptions}>
+            <div className={style.formGroup}>
+                <label htmlFor="province">Şehir</label>
+                <select id="province"
+                        name="province"
+                        onChange={(meta) => {
+                            handleSelectChange(meta)
+                        }}
+                >
+                    <option value="0">Seçiniz</option>
+                    {provinceList}
+                </select>
+            </div>
+            <div className={style.formGroup}>
+                <label htmlFor="place">Mekan</label>
+                <select id="place"
+                        name="place"
+                        onChange={(meta) => {
+                            handleSelectChange(meta)
+                        }}
+                >
+                    <option value="0">Seçiniz</option>
+                    {placeList}
+                </select>
+            </div>
         </div>
 
         <div className={style.filterOptions}>
@@ -65,6 +128,7 @@ export default function Filter({places, categories, provinces, onFilter}) {
                             handleSelectChange(meta)
                         }}
                 >
+                    <option value="0">Seçiniz</option>
                     {categoryList}
                 </select>
             </div>
@@ -73,6 +137,8 @@ export default function Filter({places, categories, provinces, onFilter}) {
                 <DatePicker
                     selectsRange={true}
                     startDate={startDate}
+                    dateFormat="dd-MM-yyyy"
+                    placeholderText="Seçiniz"
                     endDate={endDate}
                     onChange={(update) => {
                         setDateRange(update);
@@ -82,32 +148,7 @@ export default function Filter({places, categories, provinces, onFilter}) {
             </div>
         </div>
 
-        <div className={style.filterOptions}>
-            <div className={style.formGroup}>
-                <label htmlFor="place">Mekan</label>
-                <select id="place"
-                        name="place"
-                        onChange={(meta) => {
-                            handleSelectChange(meta)
-                        }}
-                >
-                    {placeList}
-                </select>
-            </div>
-            <div className={style.formGroup}>
-                <label htmlFor="province">Şehir</label>
-                <select id="province"
-                        name="province"
-                        onChange={(meta) => {
-                            handleSelectChange(meta)
-                        }}
-                >
-                    {provinceList}
-                </select>
-            </div>
-        </div>
-
-        <div className={style.filterBtn} onClick={() => onFilter(filterData)}>
+        <div className={style.filterBtn} onClick={onFilterClick}>
             Filtrele
         </div>
     </div>
