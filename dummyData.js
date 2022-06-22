@@ -6,18 +6,38 @@ export const events = [
         description: "Pazar günü hip hop kültürüyle ‘’Yaz Kutlamaları’’ dansın ardından müzikle devam ediyor. Türkçe rap sahnesinin en üretken isimlerinden Anıl Piyancı, Festival Park Kadıköy’de!",
         performer: "Anıl Piyancı",
         isPopular: false,
-        startDate: "2022-01-02 03:00", // yyyy-MM-dd
+        startDate: "2022-01-02 03:00",
         endDate: "2022-01-05 22:30",
         category: 1,
         place: 1,
         photos: {
-            thumbnail: "/images/events/event-01.jpg",
+            thumbnail: "/images/events/thumbnails/event-01.jpg",
             slider: "",
-            details: []
+            details: [
+                "/images/events/details/event-01-01.jpg",
+                "/images/events/details/event-01-02.jpg",
+                "/images/events/details/event-01-03.jpg",
+            ]
         },
         price:{
-            isFree: true,
-            options: []
+            isFree: false,
+            options: [
+                {
+                    description: "1. Sıra",
+                    price: 150,
+                    unit: "TL"
+                },
+                {
+                    description: "2. Sıra",
+                    price: 250,
+                    unit: "TL"
+                },
+                {
+                    description: "3. Sıra",
+                    price: 300,
+                    unit: "TL"
+                }
+            ]
         }
     },
     {
@@ -30,15 +50,29 @@ export const events = [
         startDate: "2022-02-02 03:00",
         endDate: "2022-02-05 22:30",
         category: 2,
-        place: 2,
+        place: 15,
         photos: {
-            thumbnail: "/images/events/event-02.jpg",
+            thumbnail: "/images/events/thumbnails/event-02.jpg",
             slider: "",
-            details: []
+            details: [
+                "/images/events/details/event-02-01.jpg",
+                "/images/events/details/event-02-02.jpg",
+            ]
         },
         price:{
-            isFree: true,
-            options: []
+            isFree: false,
+            options: [
+                {
+                    description: "1. Sıra",
+                    price: 450,
+                    unit: "TL"
+                },
+                {
+                    description: "2. Sıra",
+                    price: 500,
+                    unit: "TL"
+                }
+            ]
         }
     },
     {
@@ -51,11 +85,14 @@ export const events = [
         startDate: "2022-03-02 03:00",
         endDate: "2022-03-05 22:30",
         category: 3,
-        place: 3,
+        place: 14,
         photos: {
-            thumbnail: "/images/events/event-03.jpg",
+            thumbnail: "/images/events/thumbnails/event-03.jpg",
             slider: "",
-            details: []
+            details: [
+                "/images/events/details/event-03-01.jpg",
+                "/images/events/details/event-03-02.jpg",
+            ]
         },
         price:{
             isFree: true,
@@ -74,13 +111,33 @@ export const events = [
         category: 1,
         place: 1,
         photos: {
-            thumbnail: "/images/events/event-04.jpg",
+            thumbnail: "/images/events/thumbnails/event-04.jpg",
             slider: "",
-            details: []
+            details: [
+                "/images/events/details/event-04-01.jpg",
+                "/images/events/details/event-04-02.jpg",
+                "/images/events/details/event-04-03.jpg",
+            ]
         },
         price:{
-            isFree: true,
-            options: []
+            isFree: false,
+            options: [
+                {
+                    description: "1. Sıra",
+                    price: 300,
+                    unit: "TL"
+                },
+                {
+                    description: "2. Sıra",
+                    price: 250,
+                    unit: "TL"
+                },
+                {
+                    description: "3. Sıra",
+                    price: 150,
+                    unit: "TL"
+                }
+            ]
         }
     },
     {
@@ -95,9 +152,12 @@ export const events = [
         category: 1,
         place: 1,
         photos: {
-            thumbnail: "/images/events/event-01.jpg",
+            thumbnail: "/images/events/thumbnails/event-05.jpg",
             slider: "",
-            details: []
+            details: [
+                "/images/events/details/event-05-01.jpg",
+                "/images/events/details/event-05-02.jpg",
+            ]
         },
         price:{
             isFree: true,
@@ -116,13 +176,21 @@ export const events = [
         category: 4,
         place: 1,
         photos: {
-            thumbnail: "/images/events/event-03.jpg",
+            thumbnail: "/images/events/thumbnails/event-06.jpg",
             slider: "",
-            details: []
+            details: [
+                "/images/events/details/event-06-01.jpg",
+            ]
         },
         price:{
-            isFree: true,
-            options: []
+            isFree: false,
+            options: [
+                {
+                    description: "",
+                    price: 180,
+                    unit: "TL"
+                }
+            ]
         }
     },
     {
@@ -137,7 +205,28 @@ export const events = [
         category: 5,
         place: 2,
         photos: {
-            thumbnail: "/images/events/event-02.jpg",
+            thumbnail: "/images/events/thumbnails/event-07.jpg",
+            slider: "",
+            details: []
+        },
+        price:{
+            isFree: true,
+            options: []
+        }
+    },
+    {
+        id: 8,
+        title: "İlber Ortaylı",
+        slug: "ilber-ortayli",
+        description: "Türkiye'nin önde gelen isimleri, eğlenceli, gerçekçi ve kışkırtıcı içerikleri, dolu dolu programı, oturumları ve sürprizleri İlber Ortaylı ile Kişisel Gelişim Zirvesi'nde...",
+        performer: "İlber Ortaylı",
+        isPopular: false,
+        startDate: "2022-07-02 03:00",
+        endDate: "2022-07-05 22:30",
+        category: 5,
+        place: 2,
+        photos: {
+            thumbnail: "/images/events/thumbnails/event-08.jpg",
             slider: "",
             details: []
         },
@@ -179,15 +268,16 @@ export const categories = [
 export const places = [
     {
         id: 1,
-        title: "Festival Park Kadıköy",
-        slug: "festival-park-kadikoy",
+        title: "Özgürlük Parkı Amfi Tiyatro",
+        slug: "ozgurluk-parki-amfi-tiyatro",
         address: {
             country: "Türkiye",
-            province: 6,
+            province: 34,
             district: "Kadıköy",
-            line: ""
+            line: "Göztepe, Mustafa Mazhar Bey Sokağı No:2",
+            postCode: 34730
         },
-        googleMapUrl: "https://www.google.com/maps/search/Festival+Park+Kad%C4%B1k%C3%B6y/@40.9798962,29.0374829,15z/data=!3m1!4b1"
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12048.692632178061!2d29.036985091553603!3d40.97768901870417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac73ea354dae7%3A0xef6a0b0dd89f7579!2zw5Z6Z8O8cmzDvGsgUGFya8SxIEFtZmkgVGl5YXRybw!5e0!3m2!1str!2str!4v1655895249517!5m2!1str!2str"
     },
     {
         id: 2,
@@ -197,9 +287,10 @@ export const places = [
             country: "Türkiye",
             province: 34,
             district: "Kadıköy",
-            line: ""
+            line: "Hasanpaşa, Kurbağalıdere Cd. No:125",
+            postCode: 34722
         },
-        googleMapUrl: "https://www.google.com/maps?q=M%C3%BCze+Gazhane&zoom=14&size=512x512&maptype=roadmap&sensor=false"
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.3283533914764!2d29.0404419156799!3d40.996185828117135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab80b23ed2915%3A0x4bdfeb36fc52e4c1!2sM%C3%BCze%20Gazhane!5e0!3m2!1str!2str!4v1655895098585!5m2!1str!2str"
     },
     {
         id: 3,
@@ -209,13 +300,205 @@ export const places = [
             country: "Türkiye",
             province: 34,
             district: "Fatih",
-            line: ""
+            line: "Hoca Paşa, Hoca Paşa Mahallesi Ankara Caddesi, Hocapaşa Hamamı Sk. No:3 D:B",
+            postCode: 34110
         },
-        googleMapUrl: "https://www.google.com/maps/place/HODJAPASHA/@41.0142616,28.9735526,17z/data=!3m1!4b1!4m5!3m4!1s0x14cab9eaa5042601:0xeffa92ce4c38fe91!8m2!3d41.0142616!4d28.9757413"
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.5022915515315!2d28.973552615680337!3d41.01426562700471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9eaa5042601%3A0xeffa92ce4c38fe91!2sHODJAPASHA!5e0!3m2!1str!2str!4v1655894986261!5m2!1str!2str"
+    },
+    {
+        id: 4,
+        title: "Volkswagen Arena",
+        slug: "volkswagen-arena",
+        address: {
+            country: "Türkiye",
+            province: 34,
+            district: "Sarıyer",
+            line: "Huzur Mh., Maslak Ayazağa Cd. 4/A",
+            postCode: 34396
+        },
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3006.179201246173!2d29.005514515682364!3d41.108777221182734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab5ce5652f4c3%3A0x93d7757dd34b126d!2sVolkswagen%20Arena!5e0!3m2!1str!2str!4v1655892482278!5m2!1str!2str"
+    },
+    {
+        id: 5,
+        title: "UNIQ İstanbul",
+        slug: "uniq-istanbul",
+        address: {
+            country: "Türkiye",
+            province: 34,
+            district: "Sarıyer",
+            line: "Huzur Mh., Maslak Ayazağa Cd. No:4",
+            postCode: 34485
+        },
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3006.222036979869!2d29.005694315682444!3d41.107841621240475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab5cfaca3648f%3A0xe39c0dc6b9606e32!2sUNIQ%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1655892705027!5m2!1str!2str"
+    },
+    {
+        id: 6,
+        title: "Zorlu Performans Sanatları Merkezi",
+        slug: "zorlu-performans-sanatlari-merkezi",
+        address: {
+            country: "Türkiye",
+            province: 34,
+            district: "Beşiktaş",
+            line: "Levazım, Koru Sokağı No:2",
+            postCode: 34340
+        },
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.083252146704!2d29.01530201568164!3d41.06717282374699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab645fb9fd1a5%3A0x272558825cc8e0dd!2sZorlu%20Performans%20Sanatlar%C4%B1%20Merkezi!5e0!3m2!1str!2str!4v1655893017792!5m2!1str!2str"
+    },
+    {
+        id: 7,
+        title: "Şinasi Sahnesi",
+        slug: "sinasi-sahnesi",
+        address: {
+            country: "Türkiye",
+            province: 6,
+            district: "Çankaya",
+            line: "Remzi Oğuz Arık Mahallesi, Tunus Cd. No:92",
+            postCode: 6680
+        },
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1141345.454870528!2d32.07145717382383!3d39.856220256160604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34fa3d7651feb%3A0xa44085bf78db35f2!2s%C5%9Einasi%20Sahnesi!5e0!3m2!1str!2str!4v1655893587382!5m2!1str!2str"
+    },
+    {
+        id: 8,
+        title: "Ankara Oyuncak Müzesi",
+        slug: "ankara-oyuncak-muzesi",
+        address: {
+            country: "Türkiye",
+            province: 6,
+            district: "Yenimahalle",
+            line: "Emniyet Mahallesi, İncitaşı Sok. Ankara Üniversitesi Beşevler 10. Yıl Yerleşkesi",
+            postCode: 6560
+        },
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.12086771688!2d32.82576441565694!3d39.93868599249706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34e47011074fd%3A0x35219e0b58c520d7!2sAnkara%20%C3%9Cniversitesi%20Oyuncak%20M%C3%BCzesi!5e0!3m2!1str!2str!4v1655893809777!5m2!1str!2str"
+    },
+    {
+        id: 9,
+        title: "TRT Müzesi",
+        slug: "trt-muzesi",
+        address: {
+            country: "Türkiye",
+            province: 6,
+            district: "Çankaya",
+            line: "Aşağı Dikmen Mahallesi, Turan Güneş Bulv. Oran Yolu Trt Sitesi",
+            postCode: 6450
+        },
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22473.01598222612!2d32.826957621283405!3d39.84343494561237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34442e9619a63%3A0x130a6fde6485fb78!2zVFJUIFlhecSxbmPEsWzEsWsgVGFyaWhpIE3DvHplc2k!5e0!3m2!1str!2str!4v1655893925643!5m2!1str!2str"
+    },
+    {
+        id: 10,
+        title: "Galeri Sanatyapım",
+        slug: "galeri-sanatyapım",
+        address: {
+            country: "Türkiye",
+            province: 6,
+            district: "Yenimahalle",
+            line: "Beştepe Mahallesi, Alparslan Türkeş Cd. 7/A",
+            postCode: 6500
+        },
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13345.935509206316!2d32.809144092148266!3d39.92865443123981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f28e2de5773%3A0x2b5f4f53c35a7e1b!2sGaleri%20Sanatyap%C4%B1m!5e0!3m2!1str!2str!4v1655894139065!5m2!1str!2str"
+    },
+    {
+        id: 11,
+        title: "Ahmed Adnan Saygun Sanat Merkezi",
+        slug: "ahmed-adnan-saygun-sanatm-merkezi",
+        address: {
+            country: "Türkiye",
+            province: 35,
+            district: "Konak",
+            line: "Mehmet Ali Akman, Mahallesi, Mithatpaşa Cd. No:1087",
+            postCode: 35290
+        },
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3126.908312023966!2d27.076121615624437!3d38.39736898386681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14beaeb117baa7ed%3A0xbad7d7f2ff4beeaa!2sAhmed%20Adnan%20Saygun%20Sanat%20Merkezi!5e0!3m2!1str!2str!4v1655894641243!5m2!1str!2str"
+    },
+    {
+        id: 12,
+        title: "İzmir Sanat",
+        slug: "izmir-sanat",
+        address: {
+            country: "Türkiye",
+            province: 35,
+            district: "Konak",
+            line: "Mimar Sinan, İzmir Fuarı 26 Ağustos Kapısı",
+            postCode: 35220
+        },
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3125.493568410445!2d27.144409615625054!3d38.430066981959094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd85f3d1481ef%3A0xbbd4c57735fd1656!2s%C4%B0zmir%20Sanat!5e0!3m2!1str!2str!4v1655894804416!5m2!1str!2str"
+    },
+    {
+        id: 13,
+        title: "Antalya Açıkhava Tiyatrosu",
+        slug: "antalya-acikhava-tiyatrosu",
+        address: {
+            country: "Türkiye",
+            province: 7,
+            district: "Muratpaşa",
+            line: "Meltem, Beach Park No:18",
+            postCode: 7030
+        },
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.364376913115!2d30.66463251559379!3d36.88163047081069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c3904abf5cb5b7%3A0x2e1ae8fc977045ad!2sAntalya%20A%C3%A7%C4%B1khava%20Tiyatrosu!5e0!3m2!1str!2str!4v1655896665295!5m2!1str!2str"
+    },
+    {
+        id: 14,
+        title: "Holly Stone Performance Hall",
+        slug: "holly-stone-performance-hall",
+        address: {
+            country: "Türkiye",
+            province: 7,
+            district: "Muratpaşa",
+            line: "Selçuk, Selçuk Mah, Uzun Çarşı Sk. No:42",
+            postCode: 7100
+        },
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.2268570023007!2d30.70221661559386!3d36.88492087062515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c390044f5ff7c5%3A0xfe9bd74259246391!2sHolly%20Stone%20Performance%20Hall!5e0!3m2!1str!2str!4v1655897816260!5m2!1str!2str"
+    },
+    {
+        id: 15,
+        title: "Antalya Devlet Tiyatrosu Sahnesi",
+        slug: "antalya-devlet-tiyatrosu-sahnesi",
+        address: {
+            country: "Türkiye",
+            province: 7,
+            district: "Muratpaşa",
+            line: "Cumhuriyet Mh. 626 Sk. No:3",
+            postCode: 7100
+        },
+        googleMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1595.294964857279!2d30.702272717722476!3d36.9001571661648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c38ffaf38325a1%3A0x9ddaabb0205a9dff!2sAntalya%20Devlet%20Tiyatrosu%20Sahnesi!5e0!3m2!1str!2str!4v1655901462170!5m2!1str!2str"
     }
 ]
 
 export const provinces = [
+    {
+        id: 6,
+        name: "Ankara",
+        latitude: "39.9208",
+        longitude: "32.8541",
+        population: 5270575,
+        region: "İç Anadolu"
+    },
+    {
+        id: 7,
+        name: "Antalya",
+        latitude: "36.8841",
+        longitude: "30.7056",
+        population: 2288456,
+        region: "Akdeniz"
+    },
+    {
+        id: 34,
+        name: "İstanbul",
+        latitude: "41.0053",
+        longitude: "28.9770",
+        population: 14657434,
+        region: "Marmara"
+    },
+    {
+        id: 35,
+        name: "İzmir",
+        latitude: "38.4189",
+        longitude: "27.1287",
+        population: 4168415,
+        region: "Ege"
+    }
+]
+
+/*export const provinces = [
     {
         id: 1,
         name: "Adana",
@@ -864,4 +1147,4 @@ export const provinces = [
         population: 360388,
         region: "Karadeniz"
     }
-]
+]*/

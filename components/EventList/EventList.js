@@ -22,25 +22,35 @@ export default function EventList({events, categories, places, provinces}) {
         return provinces[index];
     }
 
-
     const items = events.map((item, index) => {
         let category = getCategory(item.category);
         let palace = getPlace(item.place);
         let province = getProvince(palace.address.province);
 
         let address = palace.address.district +"/"+ province.name;
-        let price = item.price.isFree ? "Ücretsiz" : "100.00 TL";
+        let price = item.price.isFree ? "Ücretsiz" : item.price.options[0].price + " "+item.price.options[0].unit;
         let slug = palace.slug+"/"+item.slug;
 
         return <div key = {"item-"+index} className={style.item}>
             <div className={style.header}>
-                <Image
-                    src={item.photos.thumbnail}
-                    alt=""
-                    width={375}
-                    height={270}
-                    layout="responsive"
-                />
+                {
+                    item.photos.thumbnail ?
+                        <Image
+                            src={item.photos.thumbnail}
+                            alt=""
+                            width={375}
+                            height={250}
+                            layout="responsive"
+                        />
+                        :
+                        <Image
+                            src="/images/events/thumbnail-image.jpg"
+                            alt=""
+                            width={375}
+                            height={250}
+                            layout="responsive"
+                        />
+                }
                 <div className={style.category}>
                     <p>{category.title}</p>
                 </div>

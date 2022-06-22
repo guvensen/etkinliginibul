@@ -6,13 +6,13 @@ import EventList from "../../components/EventList/EventList";
 
 export default function Place({slug}) {
     const [data, setData] = useState([]);
-    const getPlaceIdBySlug = places.findIndex(i => i.slug === slug);
-    const palceId = places[getPlaceIdBySlug].id;
+    const placeIndex = places.findIndex(i => i.slug === slug);
+    const placeId = places[placeIndex].id;
 
     useEffect(()=>{
         const filteredArray = events.filter(item => {
             let result = true;
-            if(item.place !== palceId){
+            if(item.place !== placeId){
                 result = false;
             }
             return result;
@@ -25,7 +25,7 @@ export default function Place({slug}) {
         <DefaultLayout>
             <div className="container">
                 <div className={style.pageTitle}>
-                    <h1>{places[getPlaceIdBySlug].title}</h1>
+                    <h1>{places[placeIndex].title}</h1>
                 </div>
 
                 <EventList events={data} categories={categories} places={places} provinces={provinces}/>
