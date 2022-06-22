@@ -82,74 +82,75 @@ export default function Filter({places, categories, provinces, onFilter}) {
     })
 
     return <div className={style.filterWrapper}>
-
-        <div className={style.searchBar}>
-            <input
-                type="text"
-                placeholder="Ara.."
-                name="query"
-                onChange={handleInputChange}
-            />
-        </div>
-
-        <div className={style.filterOptions}>
-            <div className={style.formGroup}>
-                <label htmlFor="province">Şehir</label>
-                <select id="province"
-                        name="province"
-                        onChange={(meta) => {
-                            handleSelectChange(meta)
-                        }}
-                >
-                    <option value="0">Seçiniz</option>
-                    {provinceList}
-                </select>
-            </div>
-            <div className={style.formGroup}>
-                <label htmlFor="place">Mekan</label>
-                <select id="place"
-                        name="place"
-                        onChange={(meta) => {
-                            handleSelectChange(meta)
-                        }}
-                >
-                    <option value="0">Seçiniz</option>
-                    {placeList}
-                </select>
-            </div>
-        </div>
-
-        <div className={style.filterOptions}>
-            <div className={style.formGroup}>
-                <label htmlFor="category">Etkinlik Türü</label>
-                <select id="category"
-                        name="category"
-                        onChange={(meta) => {
-                            handleSelectChange(meta)
-                        }}
-                >
-                    <option value="0">Seçiniz</option>
-                    {categoryList}
-                </select>
-            </div>
-            <div className={style.formGroup}>
-                <label htmlFor="dates">Tarih</label>
-                <DatePicker
-                    selectsRange={true}
-                    startDate={startDate}
-                    dateFormat="dd-MM-yyyy"
-                    placeholderText="Seçiniz"
-                    endDate={endDate}
-                    onChange={(update) => {
-                        setDateRange(update);
-                    }}
-                    isClearable={true}
+        <div className="container">
+            <div className={style.searchBar}>
+                <input
+                    type="text"
+                    placeholder="Ara.."
+                    name="query"
+                    onChange={handleInputChange}
                 />
             </div>
-        </div>
 
-        <div className={style.filterBtn} onClick={onFilterClick}>
-            Filtrele
+            <div className={style.filterOptions}>
+                <div className={style.formGroup}>
+                    <label htmlFor="province">Şehir</label>
+                    <select id="province"
+                            name="province"
+                            onChange={(meta) => {
+                                handleSelectChange(meta)
+                            }}
+                    >
+                        <option value="0">Seçiniz</option>
+                        {provinceList}
+                    </select>
+                </div>
+                <div className={style.formGroup}>
+                    <label htmlFor="place">Mekan</label>
+                    <select id="place"
+                            name="place"
+                            onChange={(meta) => {
+                                handleSelectChange(meta)
+                            }}
+                    >
+                        <option value="0">Seçiniz</option>
+                        {placeList}
+                    </select>
+                </div>
+            </div>
+
+            <div className={style.filterOptions}>
+                <div className={style.formGroup}>
+                    <label htmlFor="category">Etkinlik Türü</label>
+                    <select id="category"
+                            name="category"
+                            onChange={(meta) => {
+                                handleSelectChange(meta)
+                            }}
+                    >
+                        <option value="0">Seçiniz</option>
+                        {categoryList}
+                    </select>
+                </div>
+                <div className={style.formGroup}>
+                    <label htmlFor="dates">Tarih</label>
+                    <DatePicker
+                        selectsRange={true}
+                        startDate={startDate}
+                        dateFormat="dd-MM-yyyy"
+                        placeholderText="Seçiniz"
+                        endDate={endDate}
+                        onChange={(update) => {
+                            setDateRange(update);
+                        }}
+                        isClearable={true}
+                    />
+                </div>
+            </div>
+
+            <div className={style.filterBtn} onClick={onFilterClick}>
+                Filtrele
+            </div>
         </div>
     </div>
 }

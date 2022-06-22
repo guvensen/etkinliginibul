@@ -5,14 +5,14 @@ export const events = [
         slug: "anil-piyanci",
         description: "Pazar günü hip hop kültürüyle ‘’Yaz Kutlamaları’’ dansın ardından müzikle devam ediyor. Türkçe rap sahnesinin en üretken isimlerinden Anıl Piyancı, Festival Park Kadıköy’de!",
         performer: "Anıl Piyancı",
-        isPopular: false,
-        startDate: "2022-01-02 03:00",
-        endDate: "2022-01-05 22:30",
+        isPopular: true,
+        startDate: "2022-07-15 20:00",
+        endDate: "2022-07-30 20:00",
         category: 1,
         place: 1,
         photos: {
             thumbnail: "/images/events/thumbnails/event-01.jpg",
-            slider: "",
+            slider: "/images/events/home-slider/anil-piyanci.jpg",
             details: [
                 "/images/events/details/event-01-01.jpg",
                 "/images/events/details/event-01-02.jpg",
@@ -23,17 +23,17 @@ export const events = [
             isFree: false,
             options: [
                 {
-                    description: "1. Sıra",
+                    description: "1. Kategori",
                     price: 150,
                     unit: "TL"
                 },
                 {
-                    description: "2. Sıra",
+                    description: "2. Kategori",
                     price: 250,
                     unit: "TL"
                 },
                 {
-                    description: "3. Sıra",
+                    description: "3. Kategori",
                     price: 300,
                     unit: "TL"
                 }
@@ -46,14 +46,14 @@ export const events = [
         slug: "gulmek-yakisir-alpay-erdem",
         description: "Mizah yazarı Alpay Erdem tek kişilik gösterisi ile sahnede. Uykusuz dergisi yazar ve çizerlerinden olan Alpay Erdem usta işi mizahı ile Müze Gazhane’de seyirci karşısına çıkıyor.",
         performer: "Alpay Erdem",
-        isPopular: false,
-        startDate: "2022-02-02 03:00",
-        endDate: "2022-02-05 22:30",
+        isPopular: true,
+        startDate: "2022-07-05 19:00",
+        endDate: "2022-07-15 19:00",
         category: 2,
         place: 15,
         photos: {
             thumbnail: "/images/events/thumbnails/event-02.jpg",
-            slider: "",
+            slider: "/images/events/home-slider/alpay-erdem.jpg",
             details: [
                 "/images/events/details/event-02-01.jpg",
                 "/images/events/details/event-02-02.jpg",
@@ -63,12 +63,12 @@ export const events = [
             isFree: false,
             options: [
                 {
-                    description: "1. Sıra",
+                    description: "1. Kategori",
                     price: 450,
                     unit: "TL"
                 },
                 {
-                    description: "2. Sıra",
+                    description: "2. Kategori",
                     price: 500,
                     unit: "TL"
                 }
@@ -77,26 +77,43 @@ export const events = [
     },
     {
         id: 3,
-        title: "Dansın Ritmi",
-        slug: "dansin-ritmi",
-        description: "Bu programda Osmanlı Saray dansları ve Anadolu'nun farklı bölgelerinin dansları, oryantal danslar ve ritm show ile harmanlanarak çağdaş bir koreografi ile sunulmaktadır. ",
-        performer: "Dansın Ritmi",
-        isPopular: false,
-        startDate: "2022-03-02 03:00",
-        endDate: "2022-03-05 22:30",
+        title: "Salsa Dans Gecesi",
+        slug: "salsa-dans-gecesi",
+        description: "En popüler Latin danslarının başında gelen salsa ilk olarak 1930’lu yıllarda Afrika’da doğmuş, Amerika ve Avrupa kültürlerinden etkilenerek Küba’da geliştirilmiştir. Önce Amerika'ya, sonra tüm dünyaya yayılmış modern bir dans olan salsa, adını İspanyolcada sos anlamına gelen salsa kelimesinden almıştır. Nasıl ki soslar çeşitli baharatların karışımından meydana geliyorsa salsa da farklı kültürlerin birleşiminden oluşmuş bir dans olduğu için bu adı almıştır. Bu Latin dans, yine kökeni Cuba Puerto Rico ve Venezuela olan salsa müziğine uygun bir dans olarak geliştirilmiştir.",
+        performer: "Salsa Dans Gecesi",
+        isPopular: true,
+        startDate: "2022-07-10 18:00",
+        endDate: "2022-07-13 18:00",
         category: 3,
-        place: 14,
+        place: 15,
         photos: {
-            thumbnail: "/images/events/thumbnails/event-03.jpg",
+            thumbnail: "/images/events/thumbnails/event-12.jpg",
             slider: "",
             details: [
-                "/images/events/details/event-03-01.jpg",
-                "/images/events/details/event-03-02.jpg",
+                "/images/events/details/event-12-01.jpg",
+                "/images/events/details/event-12-02.jpg",
+                "/images/events/details/event-12-03.jpg",
             ]
         },
         price:{
-            isFree: true,
-            options: []
+            isFree: false,
+            options: [
+                {
+                    description: "1. Kategori",
+                    price: 170,
+                    unit: "TL"
+                },
+                {
+                    description: "2. Kategori",
+                    price: 180,
+                    unit: "TL"
+                },
+                {
+                    description: "3. Kategori",
+                    price: 200,
+                    unit: "TL"
+                }
+            ]
         }
     },
     {
@@ -106,10 +123,10 @@ export const events = [
         description: "Türk pop müziğinin eskimeyen şarkılarının sesi Çelik, 25 Haziran Cumartesi akşamı, 90’ları müziğiyle Festival Park Kadıköy’e getiriyor!",
         performer: "Çelik",
         isPopular: false,
-        startDate: "2022-04-02 03:00",
-        endDate: "2022-04-05 22:30",
+        startDate: "2022-06-02 22:00",
+        endDate: "2022-06-05 22:00",
         category: 1,
-        place: 1,
+        place: 4,
         photos: {
             thumbnail: "/images/events/thumbnails/event-04.jpg",
             slider: "",
@@ -123,17 +140,17 @@ export const events = [
             isFree: false,
             options: [
                 {
-                    description: "1. Sıra",
+                    description: "1. Kategori",
                     price: 300,
                     unit: "TL"
                 },
                 {
-                    description: "2. Sıra",
+                    description: "2. Kategori",
                     price: 250,
                     unit: "TL"
                 },
                 {
-                    description: "3. Sıra",
+                    description: "3. Kategori",
                     price: 150,
                     unit: "TL"
                 }
@@ -147,10 +164,10 @@ export const events = [
         description: "Güçlü sahne performansı ve müziğiyle Büyük Ev Ablukada’nın Galvaniz Gelbiraz’ı Gülinler, 24 Haziran saat 19.00’da Festival Park Kadıköy’de!",
         performer: "Gülinler",
         isPopular: false,
-        startDate: "2022-05-02 03:00",
-        endDate: "2022-05-05 22:30",
+        startDate: "2022-05-10 19:00",
+        endDate: "2022-05-15 19:30",
         category: 1,
-        place: 1,
+        place: 5,
         photos: {
             thumbnail: "/images/events/thumbnails/event-05.jpg",
             slider: "",
@@ -160,8 +177,24 @@ export const events = [
             ]
         },
         price:{
-            isFree: true,
-            options: []
+            isFree: false,
+            options: [
+                {
+                    description: "1. Kategori",
+                    price: 350,
+                    unit: "TL"
+                },
+                {
+                    description: "2. Kategori",
+                    price: 450,
+                    unit: "TL"
+                },
+                {
+                    description: "3. Kategori",
+                    price: 550,
+                    unit: "TL"
+                }
+            ]
         }
     },
     {
@@ -171,10 +204,10 @@ export const events = [
         description: "Kendine özgü komedisiyle yüzleri güldürmeye gelen Mesut Süre “Siz Hepiniz Ben Tek” adlı tek kişilik sahne performansıyla 22 Haziran Çarşamba günü saat 20.00’de Festival Park Kadıköy sahnesinde.",
         performer: "Mesut Süre",
         isPopular: false,
-        startDate: "2022-06-02 03:00",
-        endDate: "2022-06-05 22:30",
+        startDate: "2022-03-12 20:00",
+        endDate: "2022-03-18 20:30",
         category: 4,
-        place: 1,
+        place: 6,
         photos: {
             thumbnail: "/images/events/thumbnails/event-06.jpg",
             slider: "",
@@ -200,12 +233,12 @@ export const events = [
         description: "Dinleme Kulübü’nde bu haftanın teması; “iyileşmek için dinlediğin bir parça”",
         performer: "Dinleme Kulübü",
         isPopular: false,
-        startDate: "2022-07-02 03:00",
-        endDate: "2022-07-05 22:30",
+        startDate: "2022-08-07 15:00",
+        endDate: "2022-08-12 15:00",
         category: 5,
         place: 2,
         photos: {
-            thumbnail: "/images/events/thumbnails/event-07.jpg",
+            thumbnail: "", // /images/events/thumbnails/event-07.jpg
             slider: "",
             details: []
         },
@@ -221,8 +254,8 @@ export const events = [
         description: "Türkiye'nin önde gelen isimleri, eğlenceli, gerçekçi ve kışkırtıcı içerikleri, dolu dolu programı, oturumları ve sürprizleri İlber Ortaylı ile Kişisel Gelişim Zirvesi'nde...",
         performer: "İlber Ortaylı",
         isPopular: false,
-        startDate: "2022-07-02 03:00",
-        endDate: "2022-07-05 22:30",
+        startDate: "2022-07-20 15:00",
+        endDate: "2022-07-20 15:00",
         category: 5,
         place: 2,
         photos: {
@@ -233,6 +266,263 @@ export const events = [
         price:{
             isFree: true,
             options: []
+        }
+    },
+    {
+        id: 9,
+        title: "Salih Tıraş",
+        slug: "salih-tiras",
+        description: "3 yıldır çeşitli etkinlik ve mekanlarda stand-up performansları sergileyen Salih Tıraş, tek kişilik gösterisi ile seyirci karşısına çıkıyor. Yöresel esinti ve tatlarla bezeli bu gösteri sizleri Salih Tıraş’ın karizmatik olmayan yaşamına doğru bir yolculuğa çıkarıyor.",
+        performer: "Salih Tıraş",
+        isPopular: false,
+        startDate: "2022-09-13 18:00",
+        endDate: "2022-09-18 18:00",
+        category: 2,
+        place: 6,
+        photos: {
+            thumbnail: "/images/events/thumbnails/event-09.jpg",
+            slider: "",
+            details: [
+                "/images/events/details/event-09-01.jpg",
+                "/images/events/details/event-09-02.jpg",
+            ]
+        },
+        price:{
+            isFree: false,
+            options: [
+                {
+                    description: "",
+                    price: 75,
+                    unit: "TL"
+                }
+            ]
+        }
+    },
+    {
+        id: 10,
+        title: "Keçifest",
+        slug: "kecifest",
+        description: " -18 yaş üstü her yaştan genç.\n" +
+            "\n" +
+            " - Türkiye'nin 45 ilinde yapılacak birebir çalışmalarla her bölgeden Efes Selçuk'a gelecek gençler.\n" +
+            "\n" +
+            "- Sosyal medyada ve haberlerde Türkiye'nin sanat imecesi olmak üzere yola çıkmış Keçifest'i görüp imeceyi büyütmek isteyenler.\n" +
+            "\n" +
+            "- Rockerlar, rapçiler, gösteri severler, stand-up severler, tiyatro ve sinema severler, edebiyata düşkünler.\n" +
+            "\n" +
+            "-Bir performanstan diğerine, bir eğlenceden diğerine koşacakları bir yaz kampı isteyenler.\n" +
+            "\n" +
+            "-Sadece dinlemeyi ve görmeyi değil, dinletmeyi ve görülmeyi isteyenler.",
+        performer: "Keçifest",
+        isPopular: false,
+        startDate: "2022-04-17 14:00",
+        endDate: "2022-04-23 14:30",
+        category: 1,
+        place: 14,
+        photos: {
+            thumbnail: "/images/events/thumbnails/event-10.jpg",
+            slider: "",
+            details: [
+                "/images/events/details/event-10-01.jpg",
+                "/images/events/details/event-10-02.jpg",
+                "/images/events/details/event-10-03.jpg",
+            ]
+        },
+        price:{
+            isFree: false,
+            options: [
+                {
+                    description: "1. Kategori",
+                    price: 250,
+                    unit: "TL"
+                },
+                {
+                    description: "2. Kategori",
+                    price: 260,
+                    unit: "TL"
+                },
+                {
+                    description: "3. Kategori",
+                    price: 300,
+                    unit: "TL"
+                }
+            ]
+        }
+    },
+    {
+        id: 11,
+        title: "Sermiyan Midnight",
+        slug: "sermiyan-midnight",
+        description: "Komedi suya sabuna dokunmadan yürür. Mizah suya sabuna dokundukça köpürür.\n" +
+            "\n" +
+            "Sermiyan Midyat izahı olmayanın mizahını yapıyor. Kendi dahil. Gülüşmek üzere…\n" +
+            "\n" +
+            " \n" +
+            "\n" +
+            "Yazan ve Sahneleyen: Sermiyan Midyat\n" +
+            "\n" +
+            "Yapım: Tiyatro MOD\n" +
+            "\n" +
+            "Uygulayıcı yapımcı: Asude Günal\n" +
+            "\n" +
+            "Logo tasarım: Özge Burçin Akdeniz\n" +
+            "\n" +
+            "Afiş tasarım: Pembe Panda yapımevi\n" +
+            "\n" +
+            "Afiş yazı tasarım: Esra Melike Çil\n" +
+            "\n" +
+            "Işık: Coşkun Yel\n" +
+            "\n" +
+            "Kulis: Nihan Ekitöz",
+        performer: "Sermiyan Midyat",
+        isPopular: false,
+        startDate: "2022-08-25 22:30",
+        endDate: "2022-08-28 22:30",
+        category: 2,
+        place: 12,
+        photos: {
+            thumbnail: "/images/events/thumbnails/event-11.jpg",
+            slider: "",
+            details: []
+        },
+        price:{
+            isFree: true,
+            options: []
+        }
+    },
+    {
+        id: 12,
+        title: "Dansın Ritmi",
+        slug: "dansin-ritmi",
+        description: "Bu programda Osmanlı Saray dansları ve Anadolu'nun farklı bölgelerinin dansları, oryantal danslar ve ritm show ile harmanlanarak çağdaş bir koreografi ile sunulmaktadır. ",
+        performer: "Dansın Ritmi",
+        isPopular: false,
+        startDate: "2022-03-02 19:30",
+        endDate: "2022-03-05 19:30",
+        category: 3,
+        place: 14,
+        photos: {
+            thumbnail: "/images/events/thumbnails/event-03.jpg",
+            slider: "",
+            details: [
+                "/images/events/details/event-03-01.jpg",
+                "/images/events/details/event-03-02.jpg",
+            ]
+        },
+        price:{
+            isFree: true,
+            options: []
+        }
+    },
+    {
+        id: 13,
+        title: "Mahşer-i Cümbüş Oyunu",
+        slug: "mahser-i-cumbus-oyunu",
+        description: "Türkiye’de modern doğaçlama tiyatronun öncüsü olan Mahşer-i Cümbüş, tiyatroseverler ile buluşmaya devam ediyor.2001 yılı Mayıs ayında Ankara Üniversitesi Dil ve Tarih-Coğrafya Fakültesi Tiyatro Bölümü öğrencileri tarafından kurulan Mahşer-i Cümbüş, aynı yıl Eylül ayında Ankara Tenedos Kafe’de “Tiyatro Sporu” gösterilerine başladı.Mahşer-i Cümbüş 2003 yılının ağustos ayında İstanbul’a taşınarak faaliyetlerini İstanbul’da sürdürdü.",
+        performer: "Mahşer-i Cümbüş",
+        isPopular: false,
+        startDate: "2022-07-14 20:00",
+        endDate: "2022-07-18 20:00",
+        category: 6,
+        place: 9,
+        photos: {
+            thumbnail: "/images/events/thumbnails/event-13.jpg",
+            slider: "",
+            details: []
+        },
+        price:{
+            isFree: true,
+            options: []
+        }
+    },
+    {
+        id: 14,
+        title: "Cimri",
+        slug: "cimri",
+        description: "Türkiye’de modern doğaçlama tiyatronun öncüsü olan Mahşer-i Cümbüş, tiyatroseverler ile buluşmaya devam ediyor.2001 yılı Mayıs ayında Ankara Üniversitesi Dil ve Tarih-Coğrafya Fakültesi Tiyatro Bölümü öğrencileri tarafından kurulan Mahşer-i Cümbüş, aynı yıl Eylül ayında Ankara Tenedos Kafe’de “Tiyatro Sporu” gösterilerine başladı.Mahşer-i Cümbüş 2003 yılının ağustos ayında İstanbul’a taşınarak faaliyetlerini İstanbul’da sürdürdü.",
+        performer: "Serkan Keskin",
+        isPopular: true,
+        startDate: "2022-10-02 20:00",
+        endDate: "2022-10-05 20:00",
+        category: 6,
+        place: 7,
+        photos: {
+            thumbnail: "/images/events/thumbnails/event-14.jpg",
+            slider: "/images/events/home-slider/cimri.jpg",
+            details: [
+                "/images/events/details/event-14-01.jpg",
+                "/images/events/details/event-14-02.jpg",
+                "/images/events/details/event-14-03.jpg",
+            ]
+        },
+        price:{
+            isFree: false,
+            options: [
+                {
+                    description: "1. Kategori",
+                    price: 193,
+                    unit: "TL"
+                },
+                {
+                    description: "2. Kategori",
+                    price: 173,
+                    unit: "TL"
+                },
+                {
+                    description: "3. Kategori",
+                    price: 153,
+                    unit: "TL"
+                },
+            ]
+        }
+    },
+    {
+        id: 15,
+        title: "Hayvan Çiftliği Oyunu",
+        slug: "hayvan-ciftligi-oyunu",
+        description: "Yaşamak için bir lidere ihtiyaç var mıdır?\n" +
+            "\n" +
+            "Adalet ve Eşitlik kavramları Bir bütünün parçaları mıdır?\n" +
+            "\n" +
+            "Sistem olgusu yalnızca kusursuz işleyişi mi işaret eder?\n" +
+            "\n" +
+            "Bir sisteme baş kaldırmak o sistemin bir parçası mıdır?\n" +
+            "\n" +
+            "George Orwell'ın bu ölümsüz eseri 'Hayvan Çiftliği' uyarlamasında, modern zamanların ışığında sorulan daha fazla soru ve aranan daha fazla cevap var…",
+        performer: "Hayvan Çiftliği",
+        isPopular: false,
+        startDate: "2022-10-15 16:30",
+        endDate: "2022-10-20 16:30",
+        category: 6,
+        place: 2,
+        photos: {
+            thumbnail: "/images/events/thumbnails/event-15.jpg",
+            slider: "",
+            details: [
+                "/images/events/details/event-15-01.jpg",
+                "/images/events/details/event-15-02.jpg",
+                "/images/events/details/event-15-03.jpg",
+            ]
+        },
+        price:{
+            isFree: false,
+            options: [
+                {
+                    description: "1. Kategori",
+                    price: 127,
+                    unit: "TL"
+                },
+                {
+                    description: "2. Kategori",
+                    price: 137,
+                    unit: "TL"
+                },
+                {
+                    description: "3. Kategori",
+                    price: 147,
+                    unit: "TL"
+                }
+            ]
         }
     }
 ]
@@ -262,6 +552,11 @@ export const categories = [
         id: 5,
         title: "Söyleşi",
         slug: "soylesi"
+    },
+    {
+        id: 6,
+        title: "Tiyatro",
+        slug: "tiyatro"
     }
 ]
 

@@ -27,8 +27,13 @@ export default function Place({slug}) {
                 <div className={style.pageTitle}>
                     <h1>{places[placeIndex].title}</h1>
                 </div>
+                {
+                    (data.length > 0) ?
+                        <EventList events={data} categories={categories} places={places} provinces={provinces}/>
+                        :
+                        <p>Bu Mekanda Etkinlik Bulunamamıştır.</p>
+                }
 
-                <EventList events={data} categories={categories} places={places} provinces={provinces}/>
             </div>
         </DefaultLayout>
     )

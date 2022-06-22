@@ -1,4 +1,3 @@
-import {useState, useEffect} from "react";
 import DefaultLayout from '../../../components/layouts/default';
 import style from './style.module.scss';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -12,7 +11,6 @@ import Image from "next/image";
 
 
 export default function Event({event, place, category, province}) {
-
 
     const sliderImages = event.photos.details.map((item,index)=>{
         return <SwiperSlide key={"index-"+index}>

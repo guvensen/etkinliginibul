@@ -25,8 +25,6 @@ export default function Header() {
                         <a href="/" className={style.item}><p>#Popüler Etkinlikler</p></a>
 
                         <a href="/mekanlar" className={style.item}><p>Mekanlar</p></a>
-
-                        <a href="/iletisim" className={style.item}><p>İletişim</p></a>
                     </nav>
                 </div>
 

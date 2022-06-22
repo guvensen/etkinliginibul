@@ -1,0 +1,37 @@
+@import "styles/mixins/breakpoints";
+@import "styles/variables";
+
+.placeWrapper{
+  .title{
+    font-size: 2rem;
+    padding: 2rem 0;
+  }
+
+  .item{
+    font-size: 1.4rem;
+    border-left: 3px solid $primary;
+    margin-bottom: .8rem;
+    padding: .4rem .6rem;
+    transition: all .2s;
+
+    &:hover{
+      color: $primary;
+    }
+  }
+
+  @include device("small") {
+    padding: 0 1rem;
+
+    .title{
+      font-size: 1.7rem;
+    }
+
+    .item{
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+
+

@@ -1,9 +1,8 @@
 @import "styles/mixins/breakpoints";
 @import "styles/variables";
 
-
 .eventListWrapper{
-  margin-top: 5rem;
+  //margin-top: 3rem;
 
   .itemContainer{
     display: grid;
@@ -11,6 +10,10 @@
     gap: 3rem 2rem;
     grid-column: 3;
     grid-row: 1;
+
+    .archive{
+      filter: grayscale(100%);
+    }
 
     .item{
       border-bottom-left-radius: 0.3125rem;
@@ -40,6 +43,8 @@
           font-weight: bold;
           line-height: normal;
         }
+
+
       }
 
       .body{

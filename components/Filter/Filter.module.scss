@@ -3,9 +3,8 @@
 
 
 .filterWrapper {
-  width: 60rem;
-  margin: 2.625rem auto 0 auto;
-
+  background: #d1d1d1;
+  padding: 3rem 0;
   .searchBar {
     width: 100%;
     margin-bottom: 1rem;
@@ -71,7 +70,7 @@
   }
 
   @include device("small") {
-    padding: 0 1rem;
+    padding: 1rem;
   }
 
   @include device("x-small") {

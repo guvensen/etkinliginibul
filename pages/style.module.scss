@@ -1,0 +1,63 @@
+@import "styles/mixins/breakpoints";
+@import "styles/variables";
+
+.sectionHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0;
+
+  .title{
+    font-size: 2.3rem;
+  }
+
+  .buttonWrapper{
+    display: flex;
+
+    .eventsButton{
+      margin-right: 1rem;
+      background: #404040;
+      color: #ffffff;
+      padding: .8rem 2rem;
+      border-radius: .3rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .3s;
+
+      &.active{
+        background: $primary;
+      }
+    }
+  }
+
+  @include device("small") {
+
+    flex-direction: column;
+
+    .title{
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+
+    .buttonWrapper{
+
+      width: 100%;
+
+      .eventsButton{
+        width: 50%;
+        padding: .4rem 1.7rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: normal
+      ;
+      }
+    }
+
+
+    padding: 0 1rem;
+  }
+}
+

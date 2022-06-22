@@ -2,7 +2,7 @@ import style from './EventList.module.scss';
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
-import {provinces} from "../../dummyData";
+import {dateFormat} from "../dateFormat/dateFormat";
 
 
 export default function EventList({events, categories, places, provinces}) {
@@ -23,15 +23,28 @@ export default function EventList({events, categories, places, provinces}) {
     }
 
     const items = events.map((item, index) => {
+        let now = Date.now();
+        let date = new Date(now);
+
         let category = getCategory(item.category);
         let palace = getPlace(item.place);
         let province = getProvince(palace.address.province);
+
+        let isArchive = (dateFormat(item.endDate) <= dateFormat(date));
 
         let address = palace.address.district +"/"+ province.name;
         let price = item.price.isFree ? "Ücretsiz" : item.price.options[0].price + " "+item.price.options[0].unit;
         let slug = palace.slug+"/"+item.slug;
 
-        return <div key = {"item-"+index} className={style.item}>
+        return <div key = {"item-"+index}
+
+                    className={
+                        [
+                            style.item,
+                            isArchive && style.archive,
+                        ].join(' ')
+                    }
+        >
             <div className={style.header}>
                 {
                     item.photos.thumbnail ?

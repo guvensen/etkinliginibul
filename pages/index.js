@@ -1,29 +1,32 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import DefaultLayout from '../components/layouts/default';
 import Filter from '../components/Filter/Filter';
 import EventList from '../components/EventList/EventList';
 import {events, categories, places, provinces} from "../dummyData";
+import style from './style.module.scss';
+import {dateFormat} from "../components/dateFormat/dateFormat";
+import {Swiper, SwiperSlide} from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import {Navigation} from "swiper";
+import Image from "next/image";
+
 
 export default function Home() {
-    const [data, setData] = useState(events);
-
-    const dateFormat = (date) =>{
-        let d = date;
-
-        if(typeof date === "string"){
-             d = new Date(date.replace(/-/g, "/"));
-        }
-
-        const year          = d.getFullYear();
-        const month         = ("0"+(d.getMonth() + 1)).slice(-2);
-        const day           = ("0"+d.getDate()).slice(-2);
-
-        return year+"-"+month+"-"+day;
-    }
+    const [data, setData] = useState([]);
+    const [archiveToggle, setArchiveToggle] = useState(false);
+    const [sliderPopularImages, setSliderPopularImages] = useState([]);
 
     const setFilter = ( param ) => {
+        let currentData;
 
-        const filteredArray = events.filter(item => {
+        if(param.startDate === null){
+            currentData = getUpcomingEvents();
+        }else{
+            currentData = events;
+        }
+
+        const filteredArray = currentData.filter(item => {
             let result = true;
             for(let key in param) {
 
@@ -70,12 +73,139 @@ export default function Home() {
         setData(filteredArray);
     }
 
+    const getUpcomingEvents = () => {
+        let now = Date.now();
+        let date = new Date(now);
+
+        return events.filter(item => {
+            let result = true;
+
+            if((dateFormat(item.endDate) <= dateFormat(date)) ){
+                result = false;
+            }
+
+            return result;
+        });
+    }
+
+    const onUpcomingEventsButton = () => {
+        let upcomingData = getUpcomingEvents();
+
+        setArchiveToggle(false);
+        setData(upcomingData);
+    }
+
+    const onArchiveEventsButton = () =>{
+        let now = Date.now();
+        let date = new Date(now);
+
+        const filteredArchive = events.filter(item => {
+            let result = true;
+
+            if((dateFormat(item.endDate) >= dateFormat(date))){
+                result = false;
+            }
+
+            return result;
+        });
+
+        setArchiveToggle(true);
+        setData(filteredArchive);
+    }
+
+    const sliderOfThePopular = () =>{
+        let upcomingData = getUpcomingEvents();
+
+        let images = [];
+
+        upcomingData.filter((item)=>{
+            let result = true;
+            if(item.isPopular){
+                let image = "/images/events/slider-image.jpg"
+                if(item.photos.slider){
+                    image = item.photos.slider;
+                }
+                images.push(image);
+            }
+            return result;
+        });
+
+        setSliderPopularImages(images);
+    }
+
+    const sliderImages = sliderPopularImages.map((item, index)=>{
+           return <SwiperSlide key={"index-"+index}>
+                <Image
+                    src={item}
+                    width={1200}
+                    height={350}
+                />
+            </SwiperSlide>
+        })
+
+    useEffect(() => {
+        let now = Date.now();
+        let date = new Date(now);
+
+        const filteredArchive = events.filter(item => {
+            let result = true;
+
+            if((dateFormat(item.endDate) <= dateFormat(date)) ){
+                result = false;
+            }
+
+            return result;
+        });
+
+        sliderOfThePopular();
+        setData(filteredArchive);
+    },[]);
+
+
     return (
       <DefaultLayout>
           <div className="container">
-              <Filter places={places} categories={categories} provinces={provinces} onFilter={setFilter}/>
+              <Swiper
+                  modules={[Navigation]}
+                  spaceBetween={0}
+                  slidesPerView={1}
+                  navigation
+              >
+                  {sliderImages}
+              </Swiper>
+          </div>
 
-              <EventList events={data} categories={categories} places={places} provinces={provinces}/>
+          <Filter places={places} categories={categories} provinces={provinces} onFilter={setFilter}/>
+
+          <div className="container">
+              <div className={style.sectionHeader}>
+                  <h1 className={style.title}>Etkinlikler</h1>
+
+                  <div className={style.buttonWrapper}>
+                      <div className={
+                               [
+                                   style.eventsButton,
+                                   !archiveToggle && style.active,
+                               ].join(' ')
+                      }
+                           onClick={onUpcomingEventsButton}>Gelecek Etkinlikler</div>
+                      <div className={
+                          [
+                              style.eventsButton,
+                              archiveToggle && style.active,
+                          ].join(' ')
+                      } onClick={onArchiveEventsButton}>Arşiv</div>
+                  </div>
+
+              </div>
+
+              {
+                  (data.length > 0) ?
+                      <EventList events={data} categories={categories} places={places} provinces={provinces}/>
+                      :
+                      <p>Aradığınız Kriterlere Uygun Etkinlik Bulunamamıştır.</p>
+              }
+
           </div>
       </DefaultLayout>
   )
